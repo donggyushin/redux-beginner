@@ -1,15 +1,17 @@
 import React from "react";
 
 const TodoItem = ({ id, text, checked, onToggle, onRemove }) => {
-  <li
-    style={{
-      textDecoration: checked ? "line-through" : "none"
-    }}
-    onClick={() => onToggle(id)}
-    onDoubleClick={() => onRemove(id)}
-  >
-    {text}
-  </li>;
+  return (
+    <li
+      style={{
+        textDecoration: checked ? "line-through" : "none"
+      }}
+      onClick={() => onToggle(id)}
+      onDoubleClick={() => onRemove(id)}
+    >
+      {text}
+    </li>
+  );
 };
 
 const Todos = ({ todos, input, onInsert, onToggle, onRemove, onChange }) => {
